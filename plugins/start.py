@@ -82,7 +82,6 @@ async def start_command(client: Client, message: Message):
                 murph.append(snt_msg)
             except:
                 pass
-
         k = await message.reply_text("𝗙𝗶𝗹𝗲𝘀📁 𝘄𝗶𝗹𝗹 𝗯𝗲 𝗱𝗲𝗹𝗲𝘁𝗲𝗱 𝗶𝗻 𝟯𝟬𝟬 𝘀𝗲𝗰𝗼𝗻𝗱𝘀 𝘁𝗼 𝗮𝘃𝗼𝗶𝗱 𝗰𝗼𝗽𝘆𝗿𝗶𝗴𝗵𝘁 𝗶𝘀𝘀𝘂𝗲𝘀. \n𝗣𝗹𝗲𝗮𝘀𝗲 𝗳𝗼𝗿𝘄𝗮𝗿𝗱 𝘁𝗵𝗲 𝗳𝗶𝗹𝗲𝘀.")
         await asyncio.sleep(SECONDS)
 
