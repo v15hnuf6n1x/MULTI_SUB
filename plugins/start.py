@@ -58,6 +58,8 @@ async def start_command(client: Client, message: Message):
             return
         await temp_msg.delete()
 
+        
+        murph = []
         for msg in messages:
 
             if bool(CUSTOM_CAPTION) & bool(msg.document):
@@ -73,11 +75,23 @@ async def start_command(client: Client, message: Message):
             try:
                 await msg.copy(chat_id=message.from_user.id, caption = caption, parse_mode = ParseMode.HTML, reply_markup = reply_markup, protect_content=PROTECT_CONTENT)
                 await asyncio.sleep(0.5)
+                murph.append(snt_msg)
             except FloodWait as e:
                 await asyncio.sleep(e.x)
                 await msg.copy(chat_id=message.from_user.id, caption = caption, parse_mode = ParseMode.HTML, reply_markup = reply_markup, protect_content=PROTECT_CONTENT)
+                murph.append(snt_msg)
             except:
                 pass
+
+        k = await message.reply_text("𝗙𝗶𝗹𝗲𝘀📁 𝘄𝗶𝗹𝗹 𝗯𝗲 𝗱𝗲𝗹𝗲𝘁𝗲𝗱 𝗶𝗻 𝟯𝟬𝟬 𝘀𝗲𝗰𝗼𝗻𝗱𝘀 𝘁𝗼 𝗮𝘃𝗼𝗶𝗱 𝗰𝗼𝗽𝘆𝗿𝗶𝗴𝗵𝘁 𝗶𝘀𝘀𝘂𝗲𝘀. \n𝗣𝗹𝗲𝗮𝘀𝗲 𝗳𝗼𝗿𝘄𝗮𝗿𝗱 𝘁𝗵𝗲 𝗳𝗶𝗹𝗲𝘀.")
+        await asyncio.sleep(SECONDS)
+
+        for data in murph:
+            try:
+                await data.delete()
+                await k.edit_text("📛𝗙𝗶𝗹𝗲𝘀 𝗮𝗿𝗲 𝗱𝗲𝗹𝗲𝘁𝗲𝗱. \n𝗖𝗹𝗶𝗰𝗸 𝘁𝗵𝗲 𝗹𝗶𝗻𝗸 𝗮𝗴𝗮𝗶𝗻 𝘁𝗼 𝗴𝗲𝘁 𝘁𝗵𝗲 𝗳𝗶𝗹𝗲")
+            except:
+                pass      
         return
     else:
         reply_markup = InlineKeyboardMarkup(
