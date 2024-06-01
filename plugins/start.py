@@ -50,11 +50,11 @@ async def start_command(client: Client, message: Message):
                 ids = [int(int(argument[1]) / abs(client.db_channel.id))]
             except:
                 return
-        temp_msg = await message.reply("Wait A Second...")
+        temp_msg = await message.reply("Pʀᴏᴄᴇssɪɴɢ......")
         try:
             messages = await get_messages(client, ids)
         except:
-            await message.reply_text("Something went wrong..!")
+            await message.reply_text("Sᴏᴍᴇᴛʜɪɴɢ ᴡᴇɴᴛ ᴡʀᴏɴɢ..❗")
             return
         await temp_msg.delete()
 
@@ -82,13 +82,13 @@ async def start_command(client: Client, message: Message):
                 murph.append(snt_msg)
             except:
                 pass
-        k = await message.reply_text("𝗙𝗶𝗹𝗲𝘀📁 𝘄𝗶𝗹𝗹 𝗯𝗲 𝗱𝗲𝗹𝗲𝘁𝗲𝗱 𝗶𝗻 𝟯𝟬𝟬 𝘀𝗲𝗰𝗼𝗻𝗱𝘀 𝘁𝗼 𝗮𝘃𝗼𝗶𝗱 𝗰𝗼𝗽𝘆𝗿𝗶𝗴𝗵𝘁 𝗶𝘀𝘀𝘂𝗲𝘀. \n𝗣𝗹𝗲𝗮𝘀𝗲 𝗳𝗼𝗿𝘄𝗮𝗿𝗱 𝘁𝗵𝗲 𝗳𝗶𝗹𝗲𝘀.")
+        k = await message.reply_text("𝗙𝗶𝗹𝗲𝘀📁 𝘄𝗶𝗹𝗹 𝗯𝗲 𝗗𝗲𝗹𝗲𝘁𝗲𝗱 𝗶𝗻 5𝗠𝗶𝗻 𝘁𝗼 𝗮𝘃𝗼𝗶𝗱 𝗰𝗼𝗽𝘆𝗿𝗶𝗴𝗵𝘁 𝗶𝘀𝘀𝘂𝗲𝘀.\n\n𝗣𝗹𝗲𝗮𝘀𝗲 𝗳𝗼𝗿𝘄𝗮𝗿𝗱 𝘁𝗵𝗲 𝗳𝗶𝗹𝗲𝘀 𝗧𝗼 𝗦𝗼𝗺𝗲𝘄𝗵𝗲𝗿𝗲 𝗲𝗹𝘀𝗲.")
         await asyncio.sleep(SECONDS)
 
         for data in murph:
             try:
                 await data.delete()
-                await k.edit_text("📛𝗙𝗶𝗹𝗲𝘀 𝗮𝗿𝗲 𝗱𝗲𝗹𝗲𝘁𝗲𝗱. \n𝗖𝗹𝗶𝗰𝗸 𝘁𝗵𝗲 𝗹𝗶𝗻𝗸 𝗮𝗴𝗮𝗶𝗻 𝘁𝗼 𝗴𝗲𝘁 𝘁𝗵𝗲 𝗳𝗶𝗹𝗲")
+                await k.edit_text("📛𝗙𝗶𝗹𝗲𝘀 𝗮𝗿𝗲 𝗗𝗲𝗹𝗲𝘁𝗲𝗱. \n𝗖𝗹𝗶𝗰𝗸 𝘁𝗵𝗲 𝗟𝗶𝗻𝗸 𝗮𝗴𝗮𝗶𝗻 𝘁𝗼 𝗴𝗲𝘁 𝘁𝗵𝗲 𝗙𝗶𝗹𝗲")
             except:
                 pass      
         return
@@ -96,8 +96,8 @@ async def start_command(client: Client, message: Message):
         reply_markup = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("⚡️ ᴀʙᴏᴜᴛ", callback_data = "about"),
-                    InlineKeyboardButton("🔒 Close", callback_data="close")
+                    InlineKeyboardButton("😊 Aʙᴏᴜᴛ", callback_data = "about"),
+                    InlineKeyboardButton("🔒 Cʟᴏsᴇ", callback_data="close")
                 ]
             ]
                 )
@@ -130,15 +130,15 @@ REPLY_ERROR = """<code>Use this command as a reply to any telegram message with 
 async def not_joined(client: Client, message: Message):
     buttons = [
         [
-            InlineKeyboardButton(text="Join Channel", url=client.invitelink),
-            InlineKeyboardButton(text="Join Channel", url=client.invitelink2),
+            InlineKeyboardButton(text="Jᴏɪɴ Mᴀɪɴ 1", url=client.invitelink),
+            InlineKeyboardButton(text="Jᴏɪɴ Mᴀɪɴ 2", url=client.invitelink2),
         ]
     ]
     try:
         buttons.append(
             [
                 InlineKeyboardButton(
-                    text = 'Try Again',
+                    text = 'Tʀʏ Aɢᴀɪɴ',
                     url = f"https://t.me/{client.username}?start={message.command[1]}"
                 )
             ]
@@ -176,7 +176,7 @@ async def send_text(client: Bot, message: Message):
         deleted = 0
         unsuccessful = 0
         
-        pls_wait = await message.reply("<i>Broadcasting Message.. This will Take Some Time</i>")
+        pls_wait = await message.reply("<i>Bʀᴏᴀᴅᴄᴀsᴛɪɴɢ Mᴇssᴀɢᴇs..... Tʜɪs ᴡɪʟʟ Tᴀᴋᴇ Sᴏᴍᴇ Tɪᴍᴇ</i>")
         for chat_id in query:
             try:
                 await broadcast_msg.copy(chat_id)
@@ -196,13 +196,13 @@ async def send_text(client: Bot, message: Message):
                 pass
             total += 1
         
-        status = f"""<b><u>Broadcast Completed</u>
+        status = f"""<b><u>Bʀᴏᴀᴅᴄᴀsᴛ Cᴏᴍᴘʟᴇᴛᴇᴅ</u>
 
-Total Users: <code>{total}</code>
-Successful: <code>{successful}</code>
-Blocked Users: <code>{blocked}</code>
-Deleted Accounts: <code>{deleted}</code>
-Unsuccessful: <code>{unsuccessful}</code></b>"""
+Tᴏᴛᴀʟ Usᴇʀs : <code>{total}</code>
+Sᴜᴄᴄᴇssғᴜʟʟ : <code>{successful}</code>
+Bʟᴏᴄᴋᴇᴅ Usᴇʀs : <code>{blocked}</code>
+Bʟᴏᴄᴋᴇᴅ Usᴇʀs : <code>{deleted}</code>
+Uɴsᴜᴄᴄᴇssғᴜʟʟ : <code>{unsuccessful}</code></b>"""
         
         return await pls_wait.edit(status)
 
