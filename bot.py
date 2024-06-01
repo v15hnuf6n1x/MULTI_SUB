@@ -1,5 +1,3 @@
-#(©)AnimeXyz
-
 from aiohttp import web
 from plugins import web_server
 
@@ -13,7 +11,7 @@ from config import API_HASH, APP_ID, LOGGER, TG_BOT_TOKEN, TG_BOT_WORKERS, FORCE
 
 
 name ="""
- BY MIKEY FROM TG
+ MR_V_bots
 """
 
 
