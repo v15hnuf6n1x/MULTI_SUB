@@ -35,7 +35,7 @@ SECONDS = int(os.getenv("SECONDS", "340"))
 #force sub channel id, if you want enable force sub
 FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", "-1001794747387"))
 FORCE_SUB_CHANNEL2 = int(os.environ.get("FORCE_SUB_CHANNEL2","-1002114043437"))
-TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
+TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "16"))
 
 #start message
 START_MSG = os.environ.get("START_MESSAGE", "ʜᴇʟʟᴏ🖐 {first}\n\nI ᴄᴀɴ ᴘʀᴏᴠɪᴅᴇ ғɪʟᴇs ғʀᴏᴍ <a href='https://t.me/A1pher'>Tᗴᗩᗰ ᗩ1ᑭᕼᗴᖇ</a> ᴛᴏ ᴍʏ ғᴀᴍɪʟʏ ᴀɴᴅ ᴛʜᴇʏ ᴄᴀɴ ᴀᴄᴄᴇss ɪᴛ ᴡɪᴛʜ ᴍʏ ʟɪɴᴋs.")
